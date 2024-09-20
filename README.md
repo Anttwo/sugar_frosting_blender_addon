@@ -35,20 +35,24 @@ You have now installed the SuGaR x Frosting addon for Blender!
 2. Follow the instructions from the repositories to optimize a SuGaR or Frosting model.
 
 3. Open a new scene in Blender, and go to the `Render` tab in the Properties. You should see a panel named `Add SuGaR or Frosting mesh`. The panel is not necessary at the top of the tab, so you may need to scroll down to find it. <br><br>
+<div align="center">
 <img src="./media/tuto_images/add_sugar_mesh_panel.PNG" alt="add_sugar_mesh_panel.PNG" width="775"/><br>
-<center><font size="2"><i>
+<font size="2"><i>
 Use the `Add SuGaR or Frosting mesh` panel to load a mesh <br>reconstructed with SuGaR or Frosting in Blender.
-</i></font></center>
+</i></font>
+</div>
 <br>
 
 4. **(a) Select a mesh.** Enter the path to the final mesh extracted from SuGaR or Frosting in the `Path to OBJ file` field. You can also click on the folder icon to select the file. The mesh should be located in `SuGaR/output/refined_mesh/<YOUR SCENE NAME>` or in `Frosting/output/refined_frosting_base_mesh/<YOUR SCENE NAME>` depending on the model you used.<br><br>
 **(b) Select a checkpoint.** Similarly, enter the path to the final checkpoint of the optimization in the `Path to PT file` field. You can also click on the folder icon to select the file. The checkpoint should be located in `SuGaR/output/refined/<YOUR SCENE NAME>` or in `Frosting/output/refined_frosting/<YOUR SCENE NAME>` depending on the model you used.<br><br>
 **(c) Load the mesh.** Finally, click on `Add mesh` to load the mesh in Blender. Feel free to rotate the mesh and change the shading mode to better visualize the mesh and its colors. 
 <br><br>
+<div align="center">
 <img src="./media/tuto_images/mesh_added.PNG" alt="mesh_added.PNG" width="775"/><br>
 <center><font size="2"><i>
 Please rotate the mesh and change the shading mode to get a better view of the mesh.
 </i></font></center>
+</div>
 <br>
 
 5. **Now, feel free to edit your mesh using Blender!** 
@@ -56,22 +60,26 @@ Please rotate the mesh and change the shading mode to get a better view of the m
 Feel free to set a camera in the scene and prepare an animation: You can animate the camera, the mesh, *etc*.<br>
 Please avoid using `Apply Location`, `Apply Rotation`, or `Apply Scale` on the edited mesh, as I am still not sure how it will affect the correspondence between the mesh and the optimized checkpoint.
 <br><br>
+<div align="center">
 <img src="./media/tuto_images/mesh_editing.PNG" alt="mesh_editing.PNG" width="775"/><br>
 <center><font size="2"><i>
 You can edit the mesh as you want, and prepare an animation with it.<br>
 You can also add other SuGaR or Frosting meshes to the scene.
 </i></font></center>
+</div>
 <br>
 
 6. Once you're done with your editing, you can prepare a rendering package ready to be rendered with SuGaR or Frosting. To do so, go to the `Render` tab in the Properties again, and select the main directory of your model in the `Path to SuGaR/Frosting directory` field.
 If you installed the repo of SuGaR or Frosting from GitHub, this directory should be named either `SuGaR` or `Frosting`.<br> 
 Finally, click on `Render Image` or `Render Animation` to render the scene. 
 <br><br>
+<div align="center">
 <img src="./media/tuto_images/render_panel.PNG" alt="render_panel.PNG" width="775"/><br>
 <center><font size="2"><i>
 In this example, we first animated the camera and the character. <br>
 Then, we added another Frosting mesh to get a background for our character.
 </i></font></center>
+</div>
 <br>
 
 `Render Image` will render a single image of the scene, with the current camera position and mesh editions/poses.<br><br>
@@ -83,8 +91,10 @@ The package should be located in `<SuGaR or Frosting>/blender/packages/`.
 `python render_blender_scene.py -p <PATH TO PACKAGE>`<br><br>
 Please check the documentation of SuGaR or Frosting for more information on the additional arguments of the script.
 <br><br>
+<div align="center">
 <img src="./media/tuto_images/render.png" alt="render.png" width="775"/><br>
 <center><font size="2"><i>
 With SuGaR or Frosting, you can get a realistic, high-quality rendering of your scene!
 </i></font></center>
+</div>
 <br>
