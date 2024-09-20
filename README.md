@@ -87,10 +87,11 @@ Then, we added another Frosting mesh to get a background for our character.
 <br><br>
 The package should be located in `<SuGaR or Frosting>/blender/packages/`.
 
-7. Finally, you can render the package with SuGaR or Frosting. You just need to go to the root directory of the SuGaR or Frosting repo and run the following command:<br><br>
-`python render_blender_scene.py -p <PATH TO PACKAGE>`<br><br>
-Please check the documentation of SuGaR or Frosting for more information on the additional arguments of the script.
-<br><br>
+7. Finally, you can render the package with SuGaR or Frosting. You just need to go to the root directory of the SuGaR or Frosting repo and run the following command:
+```shell
+python render_blender_scene.py -p <PATH TO PACKAGE>
+```
+
 <div align="center">
 <img src="./media/tuto_images/render.png" alt="render.png" width="775"/><br>
 <center><font size="2"><i>
@@ -98,3 +99,9 @@ With SuGaR or Frosting, you can get a realistic, high-quality rendering of your 
 </i></font></center>
 </div>
 <br>
+
+Please check the documentation of SuGaR or Frosting for more information on the additional arguments of the script.
+If you get artifacts in the rendering, you can try to switch the automatic adjustment method of the Gaussians from 'complex' to 'simple':
+```shell
+python render_blender_scene.py -p <PATH TO PACKAGE> --adaptation_method simple
+```
