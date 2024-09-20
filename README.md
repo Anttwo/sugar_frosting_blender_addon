@@ -105,3 +105,8 @@ If you get artifacts in the rendering, you can try to switch the automatic adjus
 ```shell
 python render_blender_scene.py -p <PATH TO PACKAGE> --adaptation_method simple
 ```
+
+8. Instead of rendering the frames, you can also export a PLY file of the Frosting representation at a specific frame. This PLY file can be used to visualize the Frosting representation in any 3D Gaussian Splatting viewer. To do so, add the argument `--export_frame_as_ply` followed by the frame number you want to export. For example, for exporting a PLY file of the representation at frame 10:
+```shell
+python render_blender_scene.py -p <PATH TO PACKAGE> --export_frame_as_ply 10
+``` 
