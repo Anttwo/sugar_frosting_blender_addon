@@ -1,9 +1,8 @@
 bl_info = {
-    "name": "SuGaR x Frosting render tool",
+    "name": "SuGaR x Frosting Editing Tool",
     "author": "Antoine Guedon",
     "blender": (4, 0, 2),
-#    "category": "Object",
-    "description": "Calls and runs python scripts to render the current scene using optimized SuGaR or Frosting checkpoints.",
+    "description": "Can be used to import and edit meshes reconstructed with SuGaR or Frosting, as well as to render edited scenes with SuGaR or Frosting.",
 }
 
 import os
