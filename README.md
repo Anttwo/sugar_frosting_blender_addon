@@ -12,9 +12,13 @@
 LIGM, Ecole des Ponts, Univ Gustave Eiffel, CNRS
 </font>
 <br>
-| <a href="https://anttwo.github.io/sugar/">SuGaR web page</a> | <a href="https://anttwo.github.io/frosting/">Frosting web page</a> | <a href="https://anttwo.github.io/">Tutorial video (coming soon)</a> |
+| <a href="https://youtu.be/xHNTS41RkXg">Presentation video</a> | <a href="https://anttwo.github.io/sugar/">SuGaR web page</a> | <a href="https://anttwo.github.io/frosting/">Frosting web page</a> |
 
 </div>
+<br>
+
+<i>Using our methods <a href="https://anttwo.github.io/sugar/">SuGaR (CVPR 2024)</a> or <a href="https://anttwo.github.io/frosting/">Gaussian Frosting (ECCV 2024)</a>, you can reconstruct editable meshes from RGB images or RGB videos, and render them using realistic Gaussian Splatting rendering.<br>
+We now provide a Blender Add-On to edit, sculpt, combine or animate 3D scenes reconstructed with SuGaR of Frosting and render them with Gaussian Splatting without a single line of code.</i>
 
 <br>
 
