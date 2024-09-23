@@ -522,6 +522,11 @@ class AddSuGaRMeshOperator(bpy.types.Operator):
             vert_idx_values = (new_idx + np.zeros(len(mesh.vertices), dtype=int)).tolist()
             vert_idx_attribute = mesh.attributes.new(name="metadata", type="INT", domain="POINT")
             vert_idx_attribute.data.foreach_set("value", vert_idx_values)
+            
+        # ---Set the viewport shading for better visualization---
+        area = next(area for area in bpy.context.screen.areas if area.type == 'VIEW_3D')
+        space = next(space for space in area.spaces if space.type == 'VIEW_3D')
+        space.shading.type = 'RENDERED'
         
         return {'FINISHED'}
     
