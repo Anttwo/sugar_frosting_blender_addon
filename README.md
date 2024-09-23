@@ -104,10 +104,14 @@ With SuGaR or Frosting, you can get a realistic, high-quality rendering of your 
 </div>
 <br>
 
-Please check the documentation of SuGaR or Frosting for more information on the additional arguments of the script.
-If you get artifacts in the rendering, you can try to switch the automatic adjustment method of the Gaussians from 'complex' to 'simple':
+Please check the documentation of SuGaR or Frosting and the `render_blender_scene.py` scripts for more information on the additional arguments.
+If you get artifacts in the rendering, you can try to switch the automatic adjustment method of the Gaussians from 'complex' to 'simple', as the simple method is less accurate but faster and more robust to extreme deformations:
 ```shell
 python render_blender_scene.py -p <PATH TO PACKAGE> --adaptation_method simple
+```
+If you notice that some Gaussians are not rendered (especially if you perform extreme deformations on the meshes), you can also change the `--deformation_threshold` argument. All Gaussians belonging to triangles with a deformation factor higher than this threshold will be culled during rendering. The default value is 2., but you can try to increase it to 5. or 10:
+```shell
+python render_blender_scene.py -p <PATH TO PACKAGE> --deformation_threshold 10
 ```
 
 8. Instead of rendering the frames, you can also export a PLY file of the Frosting representation at a specific frame. This PLY file can be used to visualize the Frosting representation in any 3D Gaussian Splatting viewer, such as <a href="https://playcanvas.com/supersplat/editor">SuperSplat</a>. To do so, add the argument `--export_frame_as_ply` followed by the frame number you want to export. For example, for exporting a PLY file of the representation at frame 10:
