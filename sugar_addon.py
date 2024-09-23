@@ -465,6 +465,9 @@ class AddSuGaRMeshOperator(bpy.types.Operator):
         bpy.ops.wm.obj_import(filepath=query_props.mesh_file_to_load)
         obj = bpy.context.selected_objects[-1]
         
+        # ---Set Rotation for better visualization---
+        obj.rotation_euler[0] = -np.pi / 2
+        
         # ---Material---
         # Set up
         material = obj.active_material
